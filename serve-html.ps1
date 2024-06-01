@@ -1,4 +1,4 @@
-# Check if the package.json file exists
+# Ensure npm dependencies are installed
 if (Test-Path "package.json") {
     Write-Host "Installing npm dependencies..."
     npm install
@@ -7,7 +7,7 @@ if (Test-Path "package.json") {
     exit 1
 }
 
-# Check if stylelint configuration file exists
+# Validate CSS files with stylelint if configuration exists
 if (Test-Path ".stylelintrc" -or Test-Path "stylelint.config.js") {
     Write-Host "Running stylelint..."
     stylelint "**/*.css"
@@ -16,7 +16,7 @@ if (Test-Path ".stylelintrc" -or Test-Path "stylelint.config.js") {
     exit 1
 }
 
-# Check if eslint configuration file exists
+# Validate JavaScript files with eslint if configuration exists
 if (Test-Path ".eslintrc" -or Test-Path "eslint.config.js") {
     Write-Host "Running eslint..."
     eslint "**/*.js"
