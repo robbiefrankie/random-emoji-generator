@@ -1,4 +1,4 @@
-@echo off
+$null = $PSCommandPath
 
 rem Clone the repository
 git clone https://github.com/robbiefrankie/random-emoji-generator.git
