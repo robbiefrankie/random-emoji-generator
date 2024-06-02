@@ -7,7 +7,7 @@ if (Test-Path "package.json") {
 }
 
 # Validate CSS files with stylelint if configuration exists
-if (Test-Path ".stylelintrc" -or Test-Path "stylelint.config.js") {
+if ((Test-Path ".stylelintrc") -or (Test-Path "stylelint.config.js")) {
     Write-Host "Running stylelint..."
     stylelint "**/*.css"
 } else {
@@ -15,7 +15,7 @@ if (Test-Path ".stylelintrc" -or Test-Path "stylelint.config.js") {
 }
 
 # Validate JavaScript files with eslint if configuration exists
-if (Test-Path ".eslintrc" -or Test-Path "eslint.config.js") {
+if ((Test-Path ".eslintrc") -or (Test-Path "eslint.config.js")) {
     Write-Host "Running eslint..."
     eslint "**/*.js"
 } else {
